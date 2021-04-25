@@ -39,6 +39,52 @@
 <!-- основное содержимое    -->
 <main>
     <h1>Регистрация на конференцию</h1>
+    <form action="" method="POST">
+        <div>
+        <label for = "user_name"> Фамилия, имя, отчество</label>
+        <input type="text" name="user_name" id="user_name" required 
+        placeholder="Фамилия Имя Отчество"
+        pattern="[А-Я][а-я]+[ ][А-Я][а-я]+[ ][А-Я][а-я]+[ ]*"
+        size="20">
+        </div>
+        <div>
+
+        <label for = "tel">контактный телефон </label>
+        <input type="tel" name="tel" id="tel">
+    </div>
+    <div>
+        <label for = "email">адрес электронной почты </label>
+        <input type="email" name="email" id="email" >
+    </div>
+    <div>
+    <label for="section">выберете секцию конференции</label>
+    <select name="section" id="section">
+        <option value="0">математика</option>
+        <option value="1">физика</option>
+        <option value="2">информатика</option>
+    </select>
+    </div>
+<div>
+    <input type="checkbox" name="Speaker" id="Speaker">
+    <label for="Speaker">Участие с докладом:</label>
+    
+</div>
+<div>
+    <label for = "report">Тема Вашего доклада:</label><br>
+    <textarea name="report" id="report" cols="20" rows="3"></textarea>
+</div>
+<div>
+    выберите форму участия: <br>
+    <input type="radio" checked value="очное" name="participation" id="offline"><label for="offline">очная форма</label> <br>
+    <input type="radio"  value="дистанционная форма" name="participation" id="online"><label for="online">дистанционная форма</label> <br>
+    <input type="radio"  value="очное" name="participation" id="offline_online"><label for="offline_online">смешання форма</label> <br>
+</div>
+
+<div>
+        
+        <input type="submit" value="зарегистрироваться">
+    </div>
+    </form>
 </main>
 <aside>
     Это боковая панель ;)
