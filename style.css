@@ -12,17 +12,21 @@ header
 h3 {
     color: white;
     margin-top: 0px;
-    
+    padding-top: 10px;
+    padding-left: 40px;
+    margin-bottom: 0pt;
 }
+
 nav
 {
     background-color: rgb(215, 239, 255);
+    border-radius: 7px;
 }
 main
 {
     background-color: rgb(249, 253, 255);
     width: 80%;
-   
+   margin: auto;
     padding-left: 20px;
     padding-bottom: 20px;
     padding-top: 5px;
@@ -38,6 +42,8 @@ footer
     background-color: rgb(0, 105, 175);
     height: 50px;
     margin-bottom: 0px;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .container
@@ -46,13 +52,200 @@ footer
     max-width: 1200 px;
     margin: auto;
     padding: 10px;
+    
+    
 }
 nav li {
     display: inline-block;
     padding: 15px;
     
+    
 }
 nav a {
     font-size: 14pt;
     text-decoration: none;
+    
+}
+
+.box {
+    width: 400px;
+    margin: 20px auto 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .box-inner img {
+    transition: all 0.4s ease-in-out;
+  }
+  .text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -40px;
+    text-align: center;
+    z-index: 2;
+  }
+  .text h2 {
+    font-family: 'Forum', cursive;
+    color: white;
+    display: inline-block;
+    font-size: 50px;
+    line-height: 75px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-width: 1px 0;
+    border-color: rgba(255,255,255,0.5);
+    border-style: solid;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .box:hover:before {
+    opacity: 1;
+  }
+  .box:hover img {
+    transform: scale(1.1);
+  }
+  .box:hover .text h2 {
+    opacity: 1;
+  }
+  
+  .photo_container {
+padding-top: 40px;
+margin-right: 0px;
+}
+.text2 {
+    font-size: 14pt;
+}
+.back {
+    font-size: 14pt;
+    background-color: rgb(215, 239, 255);
+    width: 90%;
+    margin: auto;
+    padding-left: 40px;
+}
+.pagination {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    border-radius: 0px;
+}
+.photo { 
+text-align: center;
+}
+.scale {
+  transition: 1s; /* Время эффекта */
+ 
+ margin-bottom: 5px;
+  border: 5px solid rgb(250, 210, 136)
+ }
+ .scale:hover {
+  transform: scale(1.9); /* Увеличиваем масштаб */
+ }
+ 
+ .pic_color {
+  
+  filter: grayscale(100%);
+  transition: 1s; /* Время эффекта */
+  margin-right: 15px;
+  margin-bottom: 40px;
+ }
+ .pic_color:hover {
+  
+  filter: grayscale(0%);
+  transform: scale(1.5); /* Увеличиваем масштаб */
+ }
+ 
+ .boxslider {
+   width: 52%;
+   margin: auto;
+   padding-bottom: 100px;
+  
+ }
+ .flower {
+ 
+   padding-top: 70px;
+   
+ }
+
+
+
+ .form {
+   background-color: rgb(233, 226, 164);
+  line-height: 2;
+  padding-top: 10px;
+padding-left: 50px;
+padding-right: 30px;
+padding-bottom: 30px;
+  border: 6px double orange;
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  font-weight: bold;
+  box-shadow:
+   0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 20px -23px rgba(0, 0, 0, .8),
+   23px 0 20px -23px rgba(0, 0, 0, .8),
+   0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+ .hform {
+   line-height: 1;
+   margin-bottom: 25px;
+   padding-left: 0px;
+   margin-left: 0px;
+   text-align: center;
+ }
+ 
+
+.button-1 {
+  
+  margin-top: 30px;
+  margin-left: 25%;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: .05em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #904C6E;
+  background: white;
+  border: 1px solid;
+  cursor: pointer;
+  transition: .3s linear;
+}
+.button-1:hover {
+  background: #d4ac3f;
+}
+.button-1:after {
+ 
+  font-family: Linearicons-Free;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  margin-left: 30px;
+  padding-left: 20px;
+  border-left: 1px solid;
+}
+
+.container_mes {
+  height: 800px;
 }
