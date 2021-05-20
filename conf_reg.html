@@ -25,20 +25,25 @@
  <!-- шапка документа -->
  <header>
     <h3>ПТИ</h3>
+    <div class="container">
     <nav>
-        <ol>
+        <ul>
             <li><a href = "index.html">На главную</a></li>
             <li><a href = "login.html">Авторизация</a></li>
-            <li><a href = "">Регистрация на конференцию</a></li>
-            <li><a href = "">Фотогалерея</a></li>
-            <li><a href = "">Сообщения</a></li>
-            <li><a href = "">Верстка по макету</a></li>
-        </ol>
+            <li><a href = "conf_reg.html">Регистрация на конференцию</a></li>
+            <li><a href = "photo_gallery.html">Фотогалерея</a></li>
+            <li><a href = "messages.html">Сообщения</a></li>
+            <li><a href = "layout.html">Вёрстка по макету</a></li>
+        </ul>
     </nav>
+    </div>
 </header>
 <!-- основное содержимое    -->
 <main>
-    <h1>Регистрация на конференцию</h1>
+    <div class="container">
+        <div class="form">
+    <h1 class="hform">Регистрация на конференцию</h1>
+    
     <form action="" method="POST">
         <div>
         <label for = "user_name"> Фамилия, имя, отчество</label>
@@ -48,20 +53,19 @@
         size="20">
         </div>
         <div>
-
-        <label for = "tel">контактный телефон </label>
+        <label for = "tel">Контактный телефон </label>
         <input type="tel" name="tel" id="tel">
     </div>
     <div>
-        <label for = "email">адрес электронной почты </label>
+        <label for = "email">Адрес электронной почты </label>
         <input type="email" name="email" id="email" >
     </div>
     <div>
-    <label for="section">выберете секцию конференции</label>
+    <label for="section">Выберите секцию конференции</label>
     <select name="section" id="section">
-        <option value="0">математика</option>
-        <option value="1">физика</option>
-        <option value="2">информатика</option>
+        <option value="0">Математика</option>
+        <option value="1">Физика</option>
+        <option value="2">Информатика</option>
     </select>
     </div>
 <div>
@@ -74,24 +78,29 @@
     <textarea name="report" id="report" cols="20" rows="3"></textarea>
 </div>
 <div>
-    выберите форму участия: <br>
+    Выберите форму участия: <br>
     <input type="radio" checked value="очное" name="participation" id="offline"><label for="offline">очная форма</label> <br>
     <input type="radio"  value="дистанционная форма" name="participation" id="online"><label for="online">дистанционная форма</label> <br>
-    <input type="radio"  value="очное" name="participation" id="offline_online"><label for="offline_online">смешання форма</label> <br>
+    <input type="radio"  value="смешанная форма" name="participation" id="offline_online"><label for="offline_online">смешанная форма</label> <br>
 </div>
 
 <div>
         
-        <input type="submit" value="зарегистрироваться">
+    <button class="button-1">Зарегистрироваться</button>
     </div>
     </form>
+    </div>
+    </div>
 </main>
+<!--
 <aside>
     Это боковая панель ;)
-</aside>
+</aside> -->
 <!-- подвал -->
 <footer>
+    
     <h3>2020 - 2021 учебный год</h3>
+    
 </footer>
  </body>
  </html>
