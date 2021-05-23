@@ -54,15 +54,21 @@
         </div>
         <div>
         <label for = "tel">Контактный телефон </label>
-        <input type="tel" name="tel" id="tel">
+        <input type="tel" name="tel" id="tel" required
+        placeholder="+7"
+        pattern="[+7][0-9]+" maxlength="12" size="13">
     </div>
     <div>
         <label for = "email">Адрес электронной почты </label>
-        <input type="email" name="email" id="email" >
+        <input type="email" name="email" id="email" required>
     </div>
     <div>
-    <label for="section">Выберите секцию конференции</label>
-    <select name="section" id="section">
+        <label for="date">Дата рождения: </label>
+        <input type="date" id="date" name="date">
+    </div>
+    <div>
+    <label for="section">Выберите секцию конференции:</label>
+    <select name="section" id="section" required>
         <option value="0">Математика</option>
         <option value="1">Физика</option>
         <option value="2">Информатика</option>
@@ -79,7 +85,7 @@
 </div>
 <div>
     Выберите форму участия: <br>
-    <input type="radio" checked value="очное" name="participation" id="offline"><label for="offline">очная форма</label> <br>
+    <input type="radio" value="очное" name="participation" id="offline"><label for="offline">очная форма</label> <br>
     <input type="radio"  value="дистанционная форма" name="participation" id="online"><label for="online">дистанционная форма</label> <br>
     <input type="radio"  value="смешанная форма" name="participation" id="offline_online"><label for="offline_online">смешанная форма</label> <br>
 </div>
