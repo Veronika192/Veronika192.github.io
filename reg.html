@@ -25,14 +25,14 @@
 							<label for="">Username:</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-account-o"></i>
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" required >
 							</div>
 						</div>
 						<div class="form-wrapper">
 							<label for="">Email:</label>
 							<div class="form-holder">
 								<i style="font-style: normal; font-size: 15px;">@</i>
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" required >
 							</div>
 						</div>
 					</div>
@@ -41,14 +41,14 @@
 							<label for="">Password:</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
-								<input type="password" class="form-control" placeholder="********">
+								<input type="password" class="form-control" placeholder="********" required >
 							</div>
 						</div>
 						<div class="form-wrapper">
 							<label for="">Repeat Password:</label>
 							<div class="form-holder">
 								<i class="zmdi zmdi-lock-outline"></i>
-								<input type="password" class="form-control" placeholder="********">
+								<input type="password" class="form-control" placeholder="********" required >
 							</div>
 						</div>
 					</div>
@@ -56,7 +56,8 @@
 						<div class="form-wrapper">
 							<label for="">Country:</label>
 							<div class="form-holder select">
-								<select name="" id="" class="form-control">
+								<select name="" id="" class="form-control" required="required">
+									<option value=""></option>
 									<option value="united states">United States</option>
 									<option value="united kingdom">United Kingdom</option>
                                     <option value="russian federation">Russian Federation</option>
@@ -68,7 +69,8 @@
 						<div class="form-wrapper">
 							<label for="">Gender:</label>
 							<div class="form-holder select">
-								<select name="" id="" class="form-control">
+								<select name="" id="" class="form-control" required="required" >
+									<option value=""></option>
 									<option value="male">Male</option>
 									<option value="femal">Female</option>
 								</select>
@@ -79,7 +81,7 @@
 					<div class="form-end">
 						<div class="checkbox">
 							<label>
-								<input type="checkbox"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+								<input type="checkbox" required > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 								<span class="checkmark"></span>
 							</label>
 						</div>
