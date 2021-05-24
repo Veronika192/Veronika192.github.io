@@ -1,22 +1,4 @@
-// set a custom text for the error message
-var commentArea = document.querySelector("#comment");
-var nameInput = document.querySelector("#name");
-var form = document.querySelector('form');
-var commentValue, nameValue;
-
-commentArea.addEventListener('invalid', function (e) {
-	e.target.setCustomValidity("");
-	if (!e.target.validity.valid) {
-		e.target.setCustomValidity("Please enter a comment.");
-	}
-});
-
-commentArea.addEventListener('input', function (e) {
-	e.target.setCustomValidity("");
-});
-
-
-// send form data with JavaScript
+// Отправляем данные формы на JavaScript
 if( window.FormData) {
 
 	var appendComment = function (nameValue, commentValue) {
@@ -37,14 +19,14 @@ if( window.FormData) {
 		nameValue = nameInput.value;
 
 		var xhr = new XMLHttpRequest();
-		// save the comment in the database
+		// Сохраняем комментарий в базу
 		xhr.open('POST', './save', true);
 		xhr.onload = function () {
 			appendComment(nameValue, commentValue);
 		};
 		xhr.send(formData);
 
-		// always call preventDefault at the end, see: http://molily.de/javascript-failure/
+		// Всегда вызывайте preventDefault в конце, см.: http://molily.de/javascript-failure/
 		ev.preventDefault();
 	});
 }
