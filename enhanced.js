@@ -1,3 +1,19 @@
+// Добавляем текст сообщения об ощибке
+var commentArea = document.querySelector("#comment");
+var nameInput = document.querySelector("#name");
+var form = document.querySelector('form');
+var commentValue, nameValue;
+
+commentArea.addEventListener('invalid', function (e) {
+	e.target.setCustomValidity("");
+	if (!e.target.validity.valid) {
+		e.target.setCustomValidity("Напишите комментарий.");
+	}
+});
+
+commentArea.addEventListener('input', function (e) {
+	e.target.setCustomValidity("");
+});
 // Отправляем данные формы на JavaScript
 if( window.FormData) {
 
