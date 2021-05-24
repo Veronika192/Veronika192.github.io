@@ -18,65 +18,8 @@
  
  <!-- Подключаем сценарии -->
  <script src="enhanced.js"></script>
- <script>
-    if( 'visibilityState' in document ){
-        (function( w ){
-            var loadJS = function( src, cb ){
-                "use strict";
-                var ref = w.document.getElementsByTagName( "script" )[ 0 ];
-                var script = w.document.createElement( "script" );
-                script.src = src;
-                script.async = true;
-                ref.parentNode.insertBefore( script, ref );
-                if (cb && typeof(cb) === "function") {
-                    script.onload = cb;
-                }
-                return script;
-            };
-            // commonjs
-            if( typeof module !== "undefined" ){
-                module.exports = loadJS;
-            }
-            else {
-                w.loadJS = loadJS;
-            }
-        }( typeof global !== "undefined" ? global : this ));
 
-        // This is a capable browser, let's improve the UI further!
-        var docElem = window.document.documentElement;
 
-        // the class we'll use to enhance the UI
-        var enhancedClass = "enhanced";
-        var enhancedScriptPath = "enhanced.js";
-
-        // add enhanced class
-        function addClass(){
-            docElem.className += " " + enhancedClass;
-        }
-
-        // remove enhanced class
-        function removeClass(){
-            docElem.className = docElem.className.replace( enhancedClass, " " );
-        }
-
-        // Let's enhance optimistically...
-        addClass();
-
-        // load enhanced JS file
-        var script = loadJS( enhancedScriptPath );
-
-        // if script hasn't loaded after 8 seconds, remove the enhanced class
-        var fallback = setTimeout( removeClass, 8000 );
-
-        // when the script loads, clear the timer out and add the class again just in case
-        script.onload = function(){
-            // clear the fallback timer
-            clearTimeout( fallback ); 
-            // add this class, just in case it was removed already (we can't cancel this request so it might arrive any time)
-            addClass();
-        };
-    }
-</script>
  </head>
  <body>
  <!-- шапка документа -->
@@ -98,24 +41,27 @@
 <main>
     <div class="container container_mes">
 
-    <h2>Comments</h2>
+    <h2>Комментарии</h2>
 
 	<ol class="comments">
 		<li>
-			<h4>Commenty Commentato</h4>
-			<p>First comment</p>
+			<h4>Неопознанный Страус</h4>
+			<p>Это первый комментарий.</p>
 		</li>
 	</ol>
 
 	<form action="./" method="post">
-		<label for="name">Name</label>
-		<input type="text" name="name" id="name">
+        <div class="name">
+		<label for="name">Имя</label>
+		<input type="text" name="name" id="name" required>
+    </div>
 
-		<label for="comment">Comment</label>
-		<textarea required placeholder="What's on your mind?" name="comment" id="comment"></textarea>
+		<label for="comment">Комментарий</label>
+		<textarea required placeholder="Что Вы думаете?" name="comment" id="comment"></textarea>
 
-		<button type="submit">Publish</button>
+		<button type="submit">Опубликовать</button>
 	</form>
+    </div>
 </main>
 <!--
 <aside>
